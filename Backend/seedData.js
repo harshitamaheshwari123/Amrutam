@@ -3,7 +3,7 @@ const Doctor = require("./models/Doctor");
 const TimeSlot = require("./models/TimeSlot");
 require("dotenv").config();
 
-// Sample doctor data
+
 const doctors = [
   {
     name: "Dr. Alisha Sharma",
@@ -72,7 +72,6 @@ const doctors = [
   },
 ];
 
-// Generate time slots for the next 7 days
 const generateTimeSlots = (doctorId) => {
   const slots = [];
   const timeRanges = [
@@ -89,7 +88,6 @@ const generateTimeSlots = (doctorId) => {
     const date = new Date();
     date.setDate(date.getDate() + day);
 
-    // Skip weekends (Saturday = 6, Sunday = 0)
     if (date.getDay() === 0 || date.getDay() === 6) continue;
 
     timeRanges.forEach(({ start, end }) => {
@@ -109,20 +107,17 @@ const generateTimeSlots = (doctorId) => {
 
 const seedDatabase = async () => {
   try {
-    // Connect to MongoDB
     await mongoose.connect(process.env.MONGO_URI);
     console.log("Connected to MongoDB");
 
-    // Clear existing data
+    
     await Doctor.deleteMany({});
     await TimeSlot.deleteMany({});
     console.log("Cleared existing data");
 
-    // Insert doctors
     const insertedDoctors = await Doctor.insertMany(doctors);
     console.log(`Inserted ${insertedDoctors.length} doctors`);
 
-    // Generate and insert time slots for each doctor
     const allTimeSlots = [];
     insertedDoctors.forEach((doctor) => {
       const slots = generateTimeSlots(doctor._id);

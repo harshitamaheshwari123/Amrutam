@@ -19,6 +19,8 @@ app.use(express.json());
 app.use("/api", authRoutes);
 app.use("/api/doctors", doctorRoutes);
 app.use("/api/appointments", appointmentRoutes);
+app.use("/api/admin", require("./routes/adminRoutes"));
+app.use("/api/doctor", require("./routes/doctorRoutes"));
 
 // MongoDB connection
 mongoose

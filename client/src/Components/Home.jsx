@@ -133,7 +133,7 @@ export default function HomePage() {
           onClick={() => {
             // take user to doctors listing page (if you have one) or scroll
             // For now, navigate to /doctors if route exists
-            navigate("/doctors");
+            navigate("/signup");
           }}
         >
           Get Started
@@ -168,6 +168,8 @@ export default function HomePage() {
           <select value={mode} onChange={(e) => setMode(e.target.value)}>
             <option value="All">All Modes</option>
             <option value="Online">Online</option>
+            <option value="Offline">Offline</option>
+            <option value="Home Visit">Home Visit</option>
             <option value="In-person">In-person</option>
           </select>
         </div>
@@ -181,12 +183,14 @@ export default function HomePage() {
                 <div className="specialization">{doc.specialization}</div>
                 <p>{doc.description}</p>
                 <div className="modes">
-                  {doc.modes?.includes("Online") && (
-                    <span className="mode">💻 Online</span>
-                  )}
-                  {doc.modes?.includes("In-person") && (
-                    <span className="mode">🏥 In-person</span>
-                  )}
+                  {doc.modes?.map((mode) => (
+                    <span className="mode" key={mode}>
+                      {mode === "Online" && "💻 Online"}
+                      {mode === "Offline" && "🏥 Offline"}
+                      {mode === "Home Visit" && "🏠 Home Visit"}
+                      {mode === "In-person" && "🏥 In-person"}
+                    </span>
+                  ))}
                 </div>
 
                 {/* View Availability button with login check */}

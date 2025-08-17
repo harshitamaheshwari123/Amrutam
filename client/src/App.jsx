@@ -7,7 +7,6 @@ import Dashboard from "./Components/Dashboard";
 import DoctorDetail from "./Components/DoctorDetail";
 import AppointmentDetail from "./Components/AppointmentDetail";
 
-
 export default function App() {
   return (
     <Router>

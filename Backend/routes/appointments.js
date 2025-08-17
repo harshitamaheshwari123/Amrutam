@@ -54,7 +54,7 @@ router.post("/book", auth, async (req, res) => {
 
     await otp.save();
 
-    // Auto-release slot
+   
     setTimeout(async () => {
       try {
         const slot = await TimeSlot.findById(timeSlotId);
@@ -72,7 +72,7 @@ router.post("/book", auth, async (req, res) => {
     res.json({
       message: "Appointment booked successfully. Confirm with OTP.",
       appointmentId: appointment._id,
-      otp: otpCode, // Demo only
+      otp: otpCode, 
     });
   } catch (err) {
     console.error("Booking error:", err);
@@ -130,7 +130,7 @@ router.post("/confirm", auth, async (req, res) => {
   }
 });
 
-// ------------------------- GET USER APPOINTMENTS -------------------------
+// ------------------------- GET USER APPOINTMENTS ------
 router.get("/my-appointments", auth, async (req, res) => {
   try {
     const { status } = req.query;
@@ -151,7 +151,7 @@ router.get("/my-appointments", auth, async (req, res) => {
   }
 });
 
-// ------------------------- CANCEL APPOINTMENT -------------------------
+// ------------------------- CANCEL APPOINTMENT --------------
 router.post("/:id/cancel", auth, async (req, res) => {
   try {
     const { id } = req.params;
@@ -192,7 +192,7 @@ router.post("/:id/cancel", auth, async (req, res) => {
   }
 });
 
-// ------------------------- GET APPOINTMENT BY ID -------------------------
+// ------------------------- GET APPOINTMENT BY ID --------------
 router.get("/:id", auth, async (req, res) => {
   try {
     const { id } = req.params;
@@ -200,7 +200,8 @@ router.get("/:id", auth, async (req, res) => {
 
     const appointment = await Appointment.findById(id)
       .populate("doctorId", "name specialization image")
-      .populate("timeSlotId", "startTime endTime");
+      .populate("timeSlotId", "startTime endTime")
+      .lean();
 
     console.log("Fetched appointment:", appointment);
     console.log("Logged-in user:", userId);
@@ -209,12 +210,12 @@ router.get("/:id", auth, async (req, res) => {
       return res.status(404).json({ message: "Appointment not found" });
     }
 
-    // Optional: allow admin access in future
-    if (appointment.userId.toString() !== userId.toString()) {
-      return res
-        .status(403)
-        .json({ message: "You do not have access to this appointment" });
-    }
+    // allow admin access in future
+    // if (appointment.userId.toString() !== userId.toString()) {
+    //   return res
+    //     .status(403)
+    //     .json({ message: "You do not have access to this appointment" });
+    // }
 
     res.json(appointment);
   } catch (err) {

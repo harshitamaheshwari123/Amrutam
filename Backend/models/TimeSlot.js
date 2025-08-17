@@ -44,7 +44,6 @@ const timeSlotSchema = new mongoose.Schema(
   }
 );
 
-// Index for efficient queries
 timeSlotSchema.index({ doctorId: 1, date: 1 });
 timeSlotSchema.index({ isBooked: 1, isLocked: 1 });
 

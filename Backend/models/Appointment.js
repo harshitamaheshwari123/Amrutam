@@ -67,7 +67,7 @@ const appointmentSchema = new mongoose.Schema(
   }
 );
 
-// Index for efficient queries
+
 appointmentSchema.index({ userId: 1, status: 1 });
 appointmentSchema.index({ doctorId: 1, date: 1 });
 appointmentSchema.index({ status: 1, date: 1 });
