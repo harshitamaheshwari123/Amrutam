@@ -1,10 +1,10 @@
 :root{
-  --sage-900: #264d3a;     /* deep sage for headings */
-  --sage-700: #3a6b53;     /* mid sage for accents */
-  --muted-gold: #c9a94a;   /* muted gold for highlights/buttons */
-  --beige-100: #f7f3e9;    /* light beige page background */
-  --beige-200: #efe9d3;    /* card background */
-  --muted-gray: #6b6b66;   /* neutral text */
+  --sage-900: #264d3a;    
+  --sage-700: #3a6b53;    
+  --muted-gold: #c9a94a;   
+  --beige-100: #f7f3e9;   
+  --beige-200: #efe9d3;    
+  --muted-gray: #6b6b66;   
   --glass: rgba(255,255,255,0.6);
   --radius: 12px;
   --card-shadow: 0 6px 20px rgba(25,25,25,0.06);
@@ -12,7 +12,7 @@
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-/* Page background and container */
+
 .doctor-detail {
   background: linear-gradient(180deg, var(--beige-100), #fbf9ef);
   min-height: 100vh;
@@ -31,8 +31,6 @@
   box-shadow: var(--card-shadow);
   border: 1px solid rgba(50,50,50,0.03);
 }
-
-/* Header */
 .doctor-header {
   display:flex;
   gap:18px;
@@ -69,10 +67,9 @@
   display:block;
 }
 
-/* Stats */
+
 .doctor-stats { display:flex; gap:12px; margin-top:10px; color:var(--muted-gray); font-size:14px; }
 
-/* Booking card */
 .booking-section {
   margin-top: 18px;
   background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(250,249,242,0.9));
@@ -87,12 +84,12 @@
   font-size:20px;
 }
 
-/* Form groups */
+
 .booking-form { display:flex; flex-direction:column; gap:12px; }
 .form-group label { font-weight:600; color:var(--sage-900); margin-bottom:6px; display:block; }
 .date-picker { display:flex; gap:8px; flex-wrap:wrap; }
 
-/* Date button */
+
 .date-btn {
   width:54px;
   height:54px;
@@ -118,7 +115,7 @@
   box-shadow: 0 8px 20px rgba(50,80,60,0.08);
 }
 
-/* Time slots */
+
 .time-slots { display:flex; gap:10px; flex-wrap:wrap; margin-top:6px; }
 .time-slot {
   padding:10px 12px;
@@ -136,7 +133,7 @@
   background: linear-gradient(180deg, #fffdf7, #fffaf0);
 }
 
-/* select and textarea */
+
 select, textarea, input[type="text"] {
   padding:10px 12px;
   border-radius:8px;
@@ -148,7 +145,7 @@ select, textarea, input[type="text"] {
   color:var(--sage-900);
 }
 
-/* Book button */
+
 .book-btn {
   margin-top:8px;
   padding:12px 16px;
@@ -164,7 +161,6 @@ select, textarea, input[type="text"] {
 .book-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(201,169,74,0.18); }
 .book-btn:disabled { opacity:0.6; cursor:not-allowed; transform:none; box-shadow:none; }
 
-/* Error message */
 .error-message {
   margin-top:12px;
   padding:10px 12px;
@@ -174,7 +170,7 @@ select, textarea, input[type="text"] {
   border:1px solid rgba(200,20,20,0.06);
 }
 
-/* Responsive */
+
 @media (max-width:780px){
   .doctor-header { flex-direction:row; gap:12px; }
   .doctor-avatar { width:72px; height:72px; font-size:24px; }

@@ -12,7 +12,6 @@ const Dashboard = () => {
   const [loading, setLoading] = useState(false);
   const [appointments, setAppointments] = useState([]);
 
-  // Fetch appointments on mount & after booking/deletion
   useEffect(() => {
     const fetchAppointments = async () => {
       const token = getToken();
@@ -54,7 +53,6 @@ const Dashboard = () => {
     }
   };
 
-  // Fetch on mount & after booking/deletion
   useEffect(() => {
     fetchAppointments();
   }, []);
@@ -62,7 +60,7 @@ const Dashboard = () => {
   useEffect(() => {
     if (location.state?.refresh) {
       fetchAppointments();
-      window.history.replaceState({}, document.title); // clear state
+      window.history.replaceState({}, document.title);
     }
   }, [location.state]);
 
@@ -101,19 +99,18 @@ const Dashboard = () => {
 
       await axios.post(
         `${API_BASE}/appointments/${appointmentId}/cancel`,
-        { reason: "Cancelled by user" }, // optional
+        { reason: "Cancelled by user" }, 
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
       alert("Appointment cancelled successfully!");
 
-      // Remove cancelled appointment from state in real-time
+      
       setAppointments((prev) =>
         prev.map((appt) =>
           appt._id === appointmentId ? { ...appt, status: "Cancelled" } : appt
         )
       );
-
     } catch (err) {
       console.error("Failed to cancel:", err);
       alert(err.response?.data?.message || "Failed to cancel appointment");
@@ -124,11 +121,11 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-container">
-      {/* Sidebar */}
+     
       <div className="sidebar">
         <div className="logo">
           <span role="img" aria-label="leaf">
-            🍃
+            &#127811;
           </span>
           <span>AyuMeet</span>
         </div>
@@ -150,14 +147,14 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {/* Main Content */}
+
       <div className="main-content">
         <div className="dashboard-header">
           <h1>My Appointments</h1>
           <p>Manage your consultations and view your wellness journey.</p>
         </div>
 
-        {/* Tabs */}
+        
         <div className="filter-tabs">
           <button
             className={`filter-tab ${activeTab === "upcoming" ? "active" : ""}`}
@@ -183,7 +180,7 @@ const Dashboard = () => {
           </button>
         </div>
 
-        {/* Appointments Grid */}
+       
         <div className="appointments-grid">
           {loading ? (
             <p>Loading appointments...</p>
@@ -199,19 +196,19 @@ const Dashboard = () => {
 
                 <div className="appointment-details">
                   <div className="detail-item">
-                    <span className="icon">🩺</span>
+                    <span className="icon">&#128137;</span>
                     <span className="text">
                       {appointment.doctorId?.specialization}
                     </span>
                   </div>
                   <div className="detail-item">
-                    <span className="icon">📅</span>
+                    <span className="icon">&#128197;</span>
                     <span className="text">
                       {new Date(appointment.date).toLocaleDateString()}
                     </span>
                   </div>
                   <div className="detail-item">
-                    <span className="icon">🕐</span>
+                    <span className="icon">&#128336;</span> 
                     <span className="text">{appointment.startTime}</span>
                   </div>
                 </div>
@@ -236,7 +233,7 @@ const Dashboard = () => {
             ))
           ) : (
             <div className="no-appointments">
-              <span>📅</span>
+              <span>&#128197;</span>
               <p>No {activeTab} appointments found</p>
               <p>Book your first consultation to get started!</p>
             </div>

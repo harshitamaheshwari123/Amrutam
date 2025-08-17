@@ -15,7 +15,7 @@ const doctors = [
     modes: ["Online", "Offline"],
     description:
       "Experienced Ayurvedic practitioner specializing in holistic wellness and preventive healthcare. Expert in Panchakarma therapies and lifestyle management.",
-    image: "https://via.placeholder.com/400x400",
+    image: "",
     isAvailable: true,
   },
   {
@@ -28,7 +28,7 @@ const doctors = [
     modes: ["Offline", "Home Visit"],
     description:
       "Specialized in Panchakarma detoxification therapies. Expert in treating chronic conditions through traditional Ayurvedic methods.",
-    image: "https://via.placeholder.com/400x400",
+    image: "",
     isAvailable: true,
   },
   {
@@ -41,7 +41,7 @@ const doctors = [
     modes: ["Online", "Offline", "Home Visit"],
     description:
       "Leading expert in Rasayana therapy for rejuvenation and anti-aging. Specializes in women's health and wellness.",
-    image: "https://via.placeholder.com/400x400",
+    image: "",
     isAvailable: true,
   },
   {
@@ -54,7 +54,7 @@ const doctors = [
     modes: ["Online", "Offline"],
     description:
       "Specialized in reproductive health and vitality enhancement through Ayurvedic principles and natural therapies.",
-    image: "https://via.placeholder.com/400x400",
+    image: "",
     isAvailable: true,
   },
   {
@@ -67,7 +67,7 @@ const doctors = [
     modes: ["Online", "Offline", "Home Visit"],
     description:
       "Pediatric Ayurvedic specialist with expertise in child health, nutrition, and developmental disorders.",
-    image: "https://via.placeholder.com/400x400",
+    image: "",
     isAvailable: true,
   },
 ];

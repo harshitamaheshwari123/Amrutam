@@ -75,11 +75,7 @@ button {
   text-decoration: none;
   font-weight: 600;
 }
-/* Add these responsive styles at the end of your Login.css file */
 
-/* Responsive Design */
-
-/* Medium screens (tablets) */
 @media (max-width: 768px) {
   .login-page {
     padding: 20px;
@@ -99,7 +95,6 @@ button {
   }
 }
 
-/* Small screens (mobile) */
 @media (max-width: 480px) {
   .login-page {
     padding: 10px;
@@ -120,8 +115,7 @@ button {
   
   .login-card input {
     padding: 8px;
-    font-size: 16px; /* Prevents zoom on iOS */
-  }
+    font-size: 16px; }
   
   .login-card button {
     padding: 10px;
@@ -129,7 +123,7 @@ button {
   }
 }
 
-/* Extra small screens */
+
 @media (max-width: 360px) {
   .login-card {
     padding: 0.8rem;

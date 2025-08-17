@@ -36,11 +36,7 @@
   background-color: #9abf8f;
   color: white;
 }
-/* Add these responsive styles at the end of your Navbar.css file */
 
-/* Responsive Design */
-
-/* Medium screens (tablets) */
 @media (max-width: 768px) {
   .navbar {
     padding: 15px 20px;
@@ -61,7 +57,7 @@
   }
 }
 
-/* Small screens (mobile) */
+
 @media (max-width: 480px) {
   .navbar {
     padding: 10px 15px;
@@ -96,7 +92,6 @@
   }
 }
 
-/* Extra small screens */
 @media (max-width: 360px) {
   .navbar {
     padding: 8px 10px;

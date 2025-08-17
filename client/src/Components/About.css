@@ -1,6 +1,4 @@
-/* Add these styles to your existing About.css */
 
-/* Navigation Bar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -42,7 +40,7 @@
   background-color: #90b783;
 }
 
-/* About Header */
+
 .about-header {
   text-align: center;
   padding: 60px 20px;
@@ -64,7 +62,7 @@
   line-height: 1.6;
 }
 
-/* Mission & Story Section */
+
 .mission-story {
   padding: 40px;
   display: flex;
@@ -120,7 +118,7 @@
   border: 2px dashed #ddd;
 }
 
-/* Team Section */
+
 .team-section {
   padding: 60px 40px;
   background-color: #f4f4d4;
@@ -186,7 +184,7 @@
   line-height: 1.6;
 }
 
-/* Footer - Same as Home page */
+
 .site-footer {
   background-color: #f1f2dc;
   padding: 50px 20px 20px;
@@ -255,11 +253,7 @@
   max-width: 1200px;
 }
 
-/* Add these responsive styles at the end of your About.css file */
 
-/* Responsive Design - Mobile First Approach */
-
-/* Large screens (desktop) */
 @media (min-width: 1024px) {
   .mission-story {
     padding: 40px;
@@ -275,7 +269,7 @@
   }
 }
 
-/* Medium screens (tablets) */
+
 @media (max-width: 1023px) and (min-width: 768px) {
   .mission-story {
     padding: 30px;
@@ -313,7 +307,7 @@
   }
 }
 
-/* Small screens (mobile) */
+
 @media (max-width: 767px) {
   .navbar {
     padding: 15px 20px;
@@ -398,7 +392,7 @@
   }
 }
 
-/* Extra small screens (very small phones) */
+
 @media (max-width: 480px) {
   .about-header h1 {
     font-size: 24px;
@@ -422,7 +416,7 @@
   }
 }
 
-/* Landscape orientation adjustments */
+
 @media (max-height: 500px) and (orientation: landscape) {
   .about-header {
     padding: 30px 20px;

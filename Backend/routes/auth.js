@@ -5,8 +5,6 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 
-// NOTE: do NOT rely only on a top-level cached const for JWT_SECRET
-// to ensure dotenv has loaded. We'll read process.env at runtime.
 
 router.post("/signup", async (req, res) => {
   console.log("[AUTH] /signup body:", req.body);

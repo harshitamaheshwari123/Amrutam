@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./DoctorDetail.css"; // keep the stylesheet in same folder
+import "./DoctorDetail.css";
 
 const API_BASE = "http://localhost:5000/api";
 
@@ -58,7 +58,6 @@ export default function DoctorDetail() {
   useEffect(() => {
     if (!selectedDate) return;
     fetchAvailableSlots();
-    // eslint-disable-next-line
   }, [selectedDate]);
 
   const fetchAvailableSlots = async () => {
@@ -77,24 +76,19 @@ export default function DoctorDetail() {
 
   const handleBooking = async () => {
     setError("");
-
-      const token = getToken();
-      console.log(token);
+    const token = getToken();
     if (!token) {
       if (window.confirm("You must be logged in to book. Go to login page?")) {
         navigate("/login");
       }
       return;
     }
-
     if (!selectedSlot) {
       setError("Please select a time slot.");
       return;
     }
-
     setBookingLoading(true);
     try {
-      // send authorization header (no withCredentials)
       const token = getToken();
       const res = await axios.post(
         `${API_BASE}/appointments/book`,
@@ -117,14 +111,11 @@ export default function DoctorDetail() {
           setBookingLoading(false);
           return;
         }
-
-        // confirm
         await axios.post(
           `${API_BASE}/appointments/confirm`,
           { appointmentId, otp: input },
           { headers: { Authorization: `Bearer ${token}` } }
         );
-
         alert("Appointment booked successfully!");
         navigate("/dashboard");
       } else {
@@ -136,14 +127,10 @@ export default function DoctorDetail() {
       }
     } catch (err) {
       console.error("Booking failed:", err);
-
-      // Handle 401 explicitly, but do NOT auto-redirect; show message and a Login button
       if (err?.response?.status === 401) {
-        // prefer server message if available
         const msg =
           err.response?.data?.message || "Unauthorized (401). Please login.";
         setError(msg + " You may need to login again.");
-        // do not auto-redirect; allow user to click the login button below
       } else if (!err?.response) {
         setError(
           "Network error or server unreachable. Check backend is running."
@@ -173,7 +160,6 @@ export default function DoctorDetail() {
     return (
       <div style={{ padding: 20 }}>
         <div style={{ color: "crimson", marginBottom: 8 }}>{error}</div>
-        {/* Show a clear button so the user can go to login if needed */}
         {error.toLowerCase().includes("login") && (
           <button
             onClick={() => navigate("/login")}
@@ -203,8 +189,8 @@ export default function DoctorDetail() {
               {doctor.specialization} · {doctor.experience}
             </span>
             <div className="doctor-stats">
-              <span>⭐ {doctor.rating ?? "4.5"}</span>
-              <span>👥 {doctor.patients ?? 0} patients</span>
+              <span>&#11088; {doctor.rating ?? "4.5"}</span>
+              <span>&#128101; {doctor.patients ?? 0} patients</span>
             </div>
             <p className="description" style={{ marginTop: 10 }}>
               {doctor.description}

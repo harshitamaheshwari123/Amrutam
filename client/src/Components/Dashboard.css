@@ -4,7 +4,6 @@
   background: #f4f4d4;
 }
 
-/* Sidebar Styles */
 .sidebar {
   width: 280px;
   background: #ffffff;
@@ -85,7 +84,7 @@
   color: #444;
 }
 
-/* Main Content Styles */
+
 .main-content {
   flex: 1;
   margin-left: 280px;
@@ -110,7 +109,7 @@
   margin: 0;
 }
 
-/* Filter Tabs */
+
 .filter-tabs {
   display: flex;
   justify-content: center;
@@ -142,7 +141,6 @@
   color: white;
 }
 
-/* Appointments Grid */
 .appointments-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -203,7 +201,7 @@
   background: #e53e3e;
 }
 
-/* Appointment Details */
+
 .appointment-details {
   margin-bottom: 25px;
 }
@@ -228,7 +226,7 @@
   font-weight: 500;
 }
 
-/* View Details Button */
+
 .view-details-btn {
   width: 100%;
   background: linear-gradient(135deg, #8ba678 0%, #7a9a67 100%);
@@ -247,7 +245,7 @@
   box-shadow: 0 8px 20px rgba(139, 166, 120, 0.3);
 }
 
-/* No Appointments */
+
 .no-appointments {
   text-align: center;
   background: white;
@@ -275,7 +273,6 @@
   font-weight: 600;
 }
 
-/* Loading State */
 .loading {
   text-align: center;
   background: white;
@@ -286,7 +283,7 @@
   color: #4a5568;
 }
 
-/* Error Message */
+
 .error-message {
   background: #fed7d7;
   color: #c53030;
@@ -297,7 +294,7 @@
   margin-top: 20px;
 }
 
-/* Responsive Design */
+
 @media (max-width: 1024px) {
   .sidebar {
     width: 250px;

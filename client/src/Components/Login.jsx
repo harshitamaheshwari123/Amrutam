@@ -18,10 +18,8 @@ export default function Login() {
         password,
       });
 
-      // Save token to localStorage
       localStorage.setItem("token", res.data.token);
       console.log(res.data.token);
-      // Navigate to dashboard or homepage
       navigate("/");
     } catch (err) {
       alert(err.response?.data?.message || "Login failed");
@@ -33,7 +31,7 @@ export default function Login() {
       <Navbar />
       <div className="login-page">
         <div className="login-card">
-          <div className="login-icon">🍃</div>
+          <div className="login-icon">&#127811;</div>
           <h2>Welcome Back</h2>
           <p>Log in to manage your appointments and wellness journey.</p>
           <form onSubmit={handleLogin}>

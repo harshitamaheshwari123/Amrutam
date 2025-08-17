@@ -4,9 +4,9 @@ const Appointment = require("../models/Appointment");
 const TimeSlot = require("../models/TimeSlot");
 const Doctor = require("../models/Doctor");
 const OTP = require("../models/OTP");
-const auth = require("../middleware/auth");
+const { auth } = require("../middleware/auth");
 
-// ------------------------- BOOK APPOINTMENT -------------------------
+// --------- book appointment---------------
 router.post("/book", auth, async (req, res) => {
   try {
     const { doctorId, timeSlotId, mode, notes } = req.body;
@@ -54,7 +54,6 @@ router.post("/book", auth, async (req, res) => {
 
     await otp.save();
 
-   
     setTimeout(async () => {
       try {
         const slot = await TimeSlot.findById(timeSlotId);
@@ -72,7 +71,7 @@ router.post("/book", auth, async (req, res) => {
     res.json({
       message: "Appointment booked successfully. Confirm with OTP.",
       appointmentId: appointment._id,
-      otp: otpCode, 
+      otp: otpCode,
     });
   } catch (err) {
     console.error("Booking error:", err);
@@ -80,7 +79,7 @@ router.post("/book", auth, async (req, res) => {
   }
 });
 
-// ------------------------- CONFIRM APPOINTMENT -------------------------
+// --------------- confirm appointment --------
 router.post("/confirm", auth, async (req, res) => {
   try {
     const { appointmentId, otp } = req.body;
@@ -130,7 +129,7 @@ router.post("/confirm", auth, async (req, res) => {
   }
 });
 
-// ------------------------- GET USER APPOINTMENTS ------
+// ----- get appointment ------
 router.get("/my-appointments", auth, async (req, res) => {
   try {
     const { status } = req.query;
@@ -151,7 +150,7 @@ router.get("/my-appointments", auth, async (req, res) => {
   }
 });
 
-// ------------------------- CANCEL APPOINTMENT --------------
+// ----- acncle appointment --------
 router.post("/:id/cancel", auth, async (req, res) => {
   try {
     const { id } = req.params;
@@ -192,7 +191,7 @@ router.post("/:id/cancel", auth, async (req, res) => {
   }
 });
 
-// ------------------------- GET APPOINTMENT BY ID --------------
+// -------  get by id ------
 router.get("/:id", auth, async (req, res) => {
   try {
     const { id } = req.params;

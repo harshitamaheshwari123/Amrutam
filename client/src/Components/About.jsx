@@ -5,10 +5,9 @@ import Navbar from "./Navbar";
 export default function AboutPage() {
   return (
     <div className="about-page">
-      {/* Header */}
-      <Navbar/>
+      <Navbar />
       <section className="about-header">
-        <div className="about-icon">🍃</div>
+        <div className="about-icon">&#127811;</div>
         <h1>About AyuMeet</h1>
         <p>
           We are dedicated to bridging the gap between ancient Ayurvedic wisdom
@@ -17,13 +16,12 @@ export default function AboutPage() {
         </p>
       </section>
 
-      {/* Mission & Story */}
       <section className="mission-story">
         <div className="mission-text">
           <h2>Our Mission & Story</h2>
 
           <div className="mission-block">
-            <h3>🎯 Our Mission</h3>
+            <h3>&#127919; Our Mission</h3>
             <p>
               To empower individuals to achieve holistic health and well-being
               by providing easy access to authentic Ayurvedic practitioners and
@@ -32,7 +30,7 @@ export default function AboutPage() {
           </div>
 
           <div className="mission-block">
-            <h3>📖 Our Story</h3>
+            <h3>&#128214; Our Story</h3>
             <p>
               AyuMeet was founded by a team of wellness enthusiasts and
               Ayurvedic experts with a shared vision: to make Ayurveda simple,
@@ -44,13 +42,12 @@ export default function AboutPage() {
 
         <div className="mission-image">
           <img
-            src="https://via.placeholder.com/600x400"
+            src="globe-holy-bible-mission-christian-600nw-2297224511.webp"
             alt="About illustration"
           />
         </div>
       </section>
 
-      {/* Meet Our Team */}
       <section className="team-section">
         <h2>Meet Our Team</h2>
         <p className="team-subtitle">
@@ -58,10 +55,7 @@ export default function AboutPage() {
         </p>
         <div className="team-grid">
           <div className="team-card">
-            <img
-              src="https://via.placeholder.com/400x400"
-              alt="Alisha Sharma"
-            />
+            <img src="1f468-1f4bc.png" alt="Alisha Sharma" />
             <h3>Dr. Alisha Sharma</h3>
             <h4>Founder & Chief Ayurvedic Officer</h4>
             <p>
@@ -71,7 +65,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="team-card">
-            <img src="https://via.placeholder.com/400x400" alt="Rohan Mehta" />
+            <img src="1f468-1f4bc.png" alt="Rohan Mehta" />
             <h3>Rohan Mehta</h3>
             <h4>Chief Executive Officer</h4>
             <p>
@@ -81,7 +75,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="team-card">
-            <img src="https://via.placeholder.com/400x400" alt="Priya Singh" />
+            <img src="1f468-1f4bc.png" alt="Priya Singh" />
             <h3>Priya Singh</h3>
             <h4>Head of Community</h4>
             <p>
@@ -93,13 +87,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="site-footer">
         <div className="footer-container">
           <div className="footer-column brand">
             <div className="footer-logo">
               <span role="img" aria-label="leaf">
-                🍃
+                &#127811;
               </span>{" "}
               <strong>AyuMeet</strong>
             </div>

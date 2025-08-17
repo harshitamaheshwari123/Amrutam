@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="logo" onClick={() => navigate("/")}>
-        🍃 AyuMeet
+        &#127811; AyuMeet
       </div>
       <div className="nav-links">
         <a href="/about">About Us</a>

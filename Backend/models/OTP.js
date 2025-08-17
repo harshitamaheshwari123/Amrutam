@@ -31,12 +31,12 @@ const otpSchema = new mongoose.Schema(
   }
 );
 
-// Index for efficient queries
+
 otpSchema.index({ appointmentId: 1 });
 otpSchema.index({ expiresAt: 1 });
 otpSchema.index({ isUsed: 1 });
+// delted after 24 hours
 
-// Auto-delete expired OTPs after 24 hours
 otpSchema.index({ expiresAt: 1 }, { expireAfterSeconds: 86400 });
 
 module.exports = mongoose.model("OTP", otpSchema);

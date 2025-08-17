@@ -136,11 +136,7 @@
 .switch-link a:hover {
   text-decoration: underline;
 }
-/* Add these responsive styles at the end of your Signup.css file */
 
-/* Responsive Design */
-
-/* Medium screens (tablets) */
 @media (max-width: 768px) {
   .signup-container {
     padding: 20px;
@@ -160,7 +156,7 @@
   }
 }
 
-/* Small screens (mobile) */
+
 @media (max-width: 480px) {
   .signup-container {
     padding: 10px;
@@ -181,7 +177,7 @@
   
   .signup-box input {
     padding: 8px;
-    font-size: 16px; /* Prevents zoom on iOS */
+    font-size: 16px; 
   }
   
   .signup-box button {
@@ -198,7 +194,7 @@
   }
 }
 
-/* Extra small screens */
+
 @media (max-width: 360px) {
   .signup-box {
     padding: 0.8rem;

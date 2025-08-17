@@ -17,13 +17,13 @@ const Signup = () => {
 
   const navigate = useNavigate();
 
-  // Email validation function
+ 
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
 
-  // Password strength checker
+
   const checkPasswordStrength = (password) => {
     if (password.length === 0) return "";
 
@@ -55,12 +55,10 @@ const Signup = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
 
-    // Clear errors when user starts typing
+    
     if (errors[name]) {
       setErrors({ ...errors, [name]: "" });
     }
-
-    // Check password strength in real-time
     if (name === "password") {
       setPasswordStrength(checkPasswordStrength(value));
     }
@@ -69,21 +67,21 @@ const Signup = () => {
   const validateForm = () => {
     const newErrors = {};
 
-    // Full name validation
+    
     if (!formData.fullName.trim()) {
       newErrors.fullName = "Full name is required";
     } else if (formData.fullName.trim().length < 2) {
       newErrors.fullName = "Full name must be at least 2 characters";
     }
 
-    // Email validation
+   
     if (!formData.email.trim()) {
       newErrors.email = "Email is required";
     } else if (!validateEmail(formData.email)) {
       newErrors.email = "Please enter a valid email address";
     }
 
-    // Password validation
+    
     if (!formData.password) {
       newErrors.password = "Password is required";
     } else if (formData.password.length < 8) {
@@ -144,7 +142,7 @@ const Signup = () => {
       <Navbar />
       <div className="signup-container">
         <form className="signup-box" onSubmit={handleSignup}>
-          <div className="signup-icon">🍃</div>
+          <div className="signup-icon">&#127811;</div>
           <h2>Create an Account</h2>
           <p>Begin your journey to wellness with AyuMeet.</p>
 
@@ -187,7 +185,6 @@ const Signup = () => {
             required
           />
 
-          {/* Password strength indicator */}
           {formData.password && (
             <div className="password-strength">
               <span>Password Strength: </span>

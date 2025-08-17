@@ -3,24 +3,22 @@ const router = express.Router();
 const Doctor = require("../models/Doctor");
 const TimeSlot = require("../models/TimeSlot");
 
-// Get all doctors with filters
 router.get("/", async (req, res) => {
   try {
     const { specialization, mode, search, rating } = req.query;
 
     let query = { isAvailable: true };
 
-    // Filter by specialization
+   
     if (specialization && specialization !== "All") {
       query.specialization = specialization;
     }
 
-    // Filter by consultation mode
+
     if (mode && mode !== "All") {
       query.modes = mode;
     }
 
-    // Search by name or description
     if (search) {
       query.$or = [
         { name: { $regex: search, $options: "i" } },
@@ -29,7 +27,6 @@ router.get("/", async (req, res) => {
       ];
     }
 
-    // Filter by minimum rating
     if (rating) {
       query.rating = { $gte: parseFloat(rating) };
     }
@@ -46,7 +43,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// Get doctor by ID
+
 router.get("/:id", async (req, res) => {
   try {
     const doctor = await Doctor.findById(req.params.id);
@@ -62,7 +59,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// Get available time slots for a doctor on a specific date
+
 router.get("/:id/slots", async (req, res) => {
   try {
     const { date } = req.query;

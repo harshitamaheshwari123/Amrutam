@@ -4,7 +4,7 @@ body {
   background-color: #f4f4d4;
 }
 
-/* Navbar */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -44,7 +44,7 @@ body {
   color: white;
 }
 
-/* Hero */
+
 .hero {
   text-align: center;
   padding: 60px 20px;
@@ -71,7 +71,7 @@ body {
   cursor: pointer;
 }
 
-/* Practitioners */
+
 .practitioners {
   padding: 40px;
   text-align: center;
@@ -98,7 +98,7 @@ body {
   min-width: 180px;
 }
 
-/* Doctor Cards */
+
 .doctor-list {
   display: flex;
   flex-wrap: wrap;
@@ -167,7 +167,7 @@ body {
   margin-top: 10px;
   cursor: pointer;
 }
-/* Why Choose Section */
+
 .why-choose {
   background-color: #ffffff;
   margin: 50px auto 0 auto;
@@ -213,7 +213,7 @@ body {
   font-size: 14px;
   color: #555;
 }
-/* How It Works */
+
 .how-it-works {
   text-align: center;
   margin: 60px auto 0;
@@ -252,7 +252,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* FAQ */
+
 .faq-section {
   background-color: #fcfce5;
   padding: 40px 20px;
@@ -283,7 +283,7 @@ body {
   color: #555;
 }
 
-/* Footer */
+
 .footer {
   text-align: center;
   padding: 20px;
@@ -292,7 +292,7 @@ body {
   color: #444;
   margin-top: 40px;
 }
-/* Site Footer */
+
 .site-footer {
   background-color: #f1f2dc;
   padding: 50px 20px 20px;
@@ -382,11 +382,7 @@ body {
 .auth-buttons .signup {
   background-color: #90b783;
 }
-/* Add these responsive styles at the end of your Home.css file */
 
-/* Responsive Design - Mobile First Approach */
-
-/* Large screens (desktop) */
 @media (min-width: 1024px) {
   .hero h1 {
     font-size: 36px;
@@ -401,7 +397,7 @@ body {
   }
 }
 
-/* Medium screens (tablets) */
+
 @media (max-width: 1023px) and (min-width: 768px) {
   .navbar {
     padding: 15px 20px;
@@ -447,7 +443,7 @@ body {
   }
 }
 
-/* Small screens (mobile) */
+
 @media (max-width: 767px) {
   .navbar {
     padding: 15px 20px;
@@ -537,7 +533,6 @@ body {
   }
 }
 
-/* Extra small screens (very small phones) */
 @media (max-width: 480px) {
   .hero h1 {
     font-size: 24px;
@@ -572,7 +567,6 @@ body {
   }
 }
 
-/* Landscape orientation adjustments */
 @media (max-height: 500px) and (orientation: landscape) {
   .hero {
     padding: 30px 20px;

@@ -1,10 +1,10 @@
-// src/Components/HomePage.jsx
+
 import React, { useEffect, useState } from "react";
 import "./Home.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-/* Static demo data (fallback) */
+
 const demoDoctorData = [
   {
     name: "Dr. Anjali Sharma",
@@ -36,7 +36,7 @@ const demoDoctorData = [
   },
 ];
 
-const API_BASE = "http://localhost:5000/api"; // change if backend runs elsewhere
+const API_BASE = "http://localhost:5000/api"; 
 
 export default function HomePage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -50,7 +50,7 @@ export default function HomePage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Try to fetch doctors from backend; if it fails, keep demo data
+   
     const fetchDoctors = async () => {
       try {
         const res = await axios.get(`${API_BASE}/doctors`, { timeout: 3000 });
@@ -58,11 +58,11 @@ export default function HomePage() {
           setDoctors(res.data);
           setBackendAvailable(true);
         } else {
-          // backend responded but no doctors — keep demo data
+       
           setDoctors(demoDoctorData);
         }
       } catch (err) {
-        // backend not reachable or error — stay on demo data
+        
         console.warn(
           "Could not fetch doctors from backend, using demo data.",
           err.message
@@ -91,7 +91,7 @@ export default function HomePage() {
     ...new Set(doctors.map((doc) => doc.specialization).filter(Boolean)),
   ];
 
-  // Helper: returns true when doc has a valid-looking Mongo ObjectId
+  
   const hasValidId = (doc) =>
     !!doc?._id && /^[a-fA-F0-9]{24}$/.test(String(doc._id));
 
@@ -104,9 +104,8 @@ export default function HomePage() {
 
   return (
     <div className="homepage">
-      {/* Navigation */}
       <nav className="navbar">
-        <div className="logo">🍃 AyuMeet</div>
+        <div className="logo">&#127811; AyuMeet</div>
         <div className="nav-links">
           <a href="/about">About Us</a>
           <Link to="/dashboard">Dashboard</Link>
@@ -121,7 +120,6 @@ export default function HomePage() {
         </div>
       </nav>
 
-      {/* Hero */}
       <section className="hero">
         <h1>Find Your Ayurvedic Healer</h1>
         <p>
@@ -131,8 +129,6 @@ export default function HomePage() {
         <button
           className="get-started"
           onClick={() => {
-            // take user to doctors listing page (if you have one) or scroll
-            // For now, navigate to /doctors if route exists
             navigate("/signup");
           }}
         >
@@ -140,7 +136,6 @@ export default function HomePage() {
         </button>
       </section>
 
-      {/* Practitioners */}
       <section className="practitioners">
         <h2>Our Practitioners</h2>
         <p>Select a specialist that aligns with your wellness goals.</p>
@@ -185,15 +180,15 @@ export default function HomePage() {
                 <div className="modes">
                   {doc.modes?.map((mode) => (
                     <span className="mode" key={mode}>
-                      {mode === "Online" && "💻 Online"}
-                      {mode === "Offline" && "🏥 Offline"}
-                      {mode === "Home Visit" && "🏠 Home Visit"}
-                      {mode === "In-person" && "🏥 In-person"}
+                      {mode === "Online" && "\u{1F4BB} Online"} 
+                      {mode === "Offline" && "\u{1F3EB} Offline"} 
+                      {mode === "Home Visit" && "\u{1F3E0} Home Visit"}{" "}
+                     
+                      {mode === "In-person" && "\u{1F3EB} In-person"} 
                     </span>
                   ))}
                 </div>
 
-                {/* View Availability button with login check */}
                 {hasValidId(doc) ? (
                   <button
                     className="view-button"
@@ -209,7 +204,7 @@ export default function HomePage() {
                       }
                     }}
                   >
-                    📅 View Availability
+                    &#128197; View Availability
                   </button>
                 ) : (
                   <button
@@ -221,7 +216,7 @@ export default function HomePage() {
                     }}
                     style={{ cursor: "pointer" }}
                   >
-                    📅 View Availability
+                    &#128197; View Availability
                   </button>
                 )}
               </div>
@@ -232,12 +227,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* (rest of page unchanged) */}
       <div className="why-choose">
         <h2>Why Choose AyuMeet?</h2>
         <div className="why-grid">
           <div className="why-card">
-            <div className="why-icon">🍃</div>
+            <div className="why-icon">&#127811;</div>
             <h3>Holistic Approach</h3>
             <p>
               We believe in treating the whole person—mind, body, and spirit— to
@@ -245,7 +239,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="why-card">
-            <div className="why-icon">👨‍⚕️</div>
+            <div className="why-icon">&#128104;</div>
             <h3>Expert Practitioners</h3>
             <p>
               Our certified Ayurvedic doctors have years of experience in
@@ -253,7 +247,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="why-card">
-            <div className="why-icon">🛡️</div>
+            <div className="why-icon">&#128737;</div>
             <h3>Personalized Care</h3>
             <p>
               Receive wellness plans and treatments that are tailored
@@ -267,7 +261,7 @@ export default function HomePage() {
         <h2>How It Works</h2>
         <div className="steps">
           <div className="step-card">
-            <div className="step-icon">🔍</div>
+            <div className="step-icon">&#128269;</div>
             <h3>1. Find Your Doctor</h3>
             <p>
               Browse through our list of expert Ayurvedic practitioners and
@@ -275,7 +269,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="step-card">
-            <div className="step-icon">📅</div>
+            <div className="step-icon">&#128197;</div>
             <h3>2. Book a Slot</h3>
             <p>
               View the doctor’s availability and select a convenient time slot
@@ -283,7 +277,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="step-card">
-            <div className="step-icon">📖</div>
+            <div className="step-icon">&#128214;</div>
             <h3>3. Get Consultation</h3>
             <p>
               Connect with your doctor for a one-on-one consultation and receive
@@ -323,7 +317,7 @@ export default function HomePage() {
           <div className="footer-column brand">
             <div className="footer-logo">
               <span role="img" aria-label="leaf">
-                🍃
+                &#127811;
               </span>{" "}
               <strong>AyuMeet</strong>
             </div>

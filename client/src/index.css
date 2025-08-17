@@ -1,6 +1,4 @@
-/* Add these global responsive styles */
 
-/* Responsive Typography */
 html {
   font-size: 16px;
 }
@@ -17,31 +15,30 @@ html {
   }
 }
 
-/* Responsive Images */
+
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* Responsive Tables */
+
 table {
   width: 100%;
   overflow-x: auto;
   display: block;
 }
 
-/* Touch-friendly buttons */
 button, a {
   min-height: 44px;
   min-width: 44px;
 }
 
-/* Prevent horizontal scroll */
+
 body {
   overflow-x: hidden;
 }
 
-/* Better mobile scrolling */
+
 * {
   -webkit-overflow-scrolling: touch;
 }
