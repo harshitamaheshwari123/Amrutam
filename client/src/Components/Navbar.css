@@ -1,0 +1,117 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4d4;
+  padding: 20px 40px;
+  font-weight: bold;
+}
+
+.logo {
+  font-size: 22px;
+  color: #567b42;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  color: #444;
+  text-decoration: none;
+}
+
+.auth-buttons button {
+  margin-left: 10px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login {
+  background-color: transparent;
+  color: #f1eaea;
+}
+
+.signup {
+  background-color: #9abf8f;
+  color: white;
+}
+/* Add these responsive styles at the end of your Navbar.css file */
+
+/* Responsive Design */
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+  
+  .logo {
+    font-size: 20px;
+  }
+  
+  .nav-links a {
+    margin: 0 10px;
+    font-size: 14px;
+  }
+  
+  .auth-buttons a {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 15px;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .logo {
+    font-size: 18px;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nav-links a {
+    margin: 0;
+    font-size: 13px;
+  }
+  
+  .auth-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .auth-buttons a {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+  .navbar {
+    padding: 8px 10px;
+  }
+  
+  .logo {
+    font-size: 16px;
+  }
+  
+  .nav-links a {
+    font-size: 12px;
+  }
+  
+  .auth-buttons a {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+}

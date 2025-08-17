@@ -1,0 +1,218 @@
+.signup-container {
+  background-color: #f9f9e8;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-box {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.signup-icon {
+  font-size: 2rem;
+  background-color: #eef5e5;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-box h2 {
+  margin-bottom: 0.25rem;
+  color: #2f2f2f;
+}
+
+.signup-box p {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.signup-box label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.signup-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fdfce7;
+  transition: border-color 0.3s ease;
+}
+
+.signup-box input:focus {
+  outline: none;
+  border-color: #a4c69e;
+  box-shadow: 0 0 0 2px rgba(164, 198, 158, 0.2);
+}
+
+.signup-box input.error {
+  border-color: #ff4444;
+  background-color: #fff5f5;
+}
+
+.signup-box input.error:focus {
+  box-shadow: 0 0 0 2px rgba(255, 68, 68, 0.2);
+}
+
+.error-message {
+  display: block;
+  text-align: left;
+  color: #ff4444;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  margin-top: -0.25rem;
+}
+
+.password-strength {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.strength-indicator {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.signup-box button {
+  width: 100%;
+  padding: 12px;
+  background-color: #a4c69e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.signup-box button:hover:not(:disabled) {
+  background-color: #8ba678;
+}
+
+.signup-box button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.signup-box button.submitting {
+  background-color: #8ba678;
+  cursor: wait;
+}
+
+.switch-link {
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+.switch-link a {
+  color: #a4c69e;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.switch-link a:hover {
+  text-decoration: underline;
+}
+/* Add these responsive styles at the end of your Signup.css file */
+
+/* Responsive Design */
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .signup-container {
+    padding: 20px;
+  }
+  
+  .signup-box {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+  
+  .signup-box h2 {
+    font-size: 1.5rem;
+  }
+  
+  .signup-box p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 480px) {
+  .signup-container {
+    padding: 10px;
+  }
+  
+  .signup-box {
+    padding: 1rem;
+    margin: 10px;
+  }
+  
+  .signup-box h2 {
+    font-size: 1.3rem;
+  }
+  
+  .signup-box p {
+    font-size: 0.8rem;
+  }
+  
+  .signup-box input {
+    padding: 8px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  .signup-box button {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .error-message {
+    font-size: 0.75rem;
+  }
+  
+  .password-strength {
+    font-size: 0.75rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+  .signup-box {
+    padding: 0.8rem;
+  }
+  
+  .signup-box h2 {
+    font-size: 1.2rem;
+  }
+  
+  .signup-box input {
+    padding: 6px;
+  }
+  
+  .signup-box button {
+    padding: 8px;
+  }
+}

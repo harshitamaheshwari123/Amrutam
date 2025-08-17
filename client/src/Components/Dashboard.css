@@ -1,0 +1,412 @@
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f4d4;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 280px;
+  background: #ffffff;
+  border-right: 1px solid #d9e5cc;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 30px;
+  margin-bottom: 40px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #567b42;
+}
+
+.logo span:first-child {
+  font-size: 28px;
+}
+
+.nav-menu {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.nav-item {
+  padding: 16px 20px;
+  margin: 8px 0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #444;
+}
+
+.nav-item:hover {
+  background: #8b8b0c;
+  color: #3e5930;
+}
+
+.nav-item.active {
+  background: #8ba678;
+  color: white;
+}
+
+.back-to-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 80px 30px;
+  margin-top: auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #444;
+}
+
+.back-to-main:hover {
+  color: #3e5930;
+}
+
+.back-icon {
+  width: 40px;
+  height: 40px;
+  background: #d9e5cc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Main Content Styles */
+.main-content {
+  flex: 1;
+  margin-left: 280px;
+  padding: 40px;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  color: #3e5930;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.dashboard-header p {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Filter Tabs */
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.filter-tab {
+  background: white;
+  border: 2px solid #d9e5cc;
+  border-radius: 25px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #444;
+  font-size: 1rem;
+  min-width: 140px;
+}
+
+.filter-tab:hover {
+  border-color: #8ba678;
+  background: #f9f9f1;
+}
+
+.filter-tab.active {
+  background: #8ba678;
+  border-color: #8ba678;
+  color: white;
+}
+
+/* Appointments Grid */
+.appointments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.appointment-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #d9e5cc;
+}
+
+.appointment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.appointment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f9f9f1;
+}
+
+.appointment-header h3 {
+  font-size: 1.4rem;
+  color: #3e5930;
+  font-weight: 600;
+  margin: 0;
+}
+
+.status {
+  padding: 6px 16px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status.upcoming {
+  background: #8ba678;
+}
+
+.status.completed {
+  background: #7a9a67;
+}
+
+.status.cancelled {
+  background: #e53e3e;
+}
+
+/* Appointment Details */
+.appointment-details {
+  margin-bottom: 25px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  padding: 8px 0;
+}
+
+.detail-item .icon {
+  font-size: 1.2rem;
+  width: 24px;
+  text-align: center;
+}
+
+.detail-item .text {
+  color: #444;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* View Details Button */
+.view-details-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #8ba678 0%, #7a9a67 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.view-details-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(139, 166, 120, 0.3);
+}
+
+/* No Appointments */
+.no-appointments {
+  text-align: center;
+  background: white;
+  border-radius: 20px;
+  padding: 60px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  grid-column: 1 / -1;
+}
+
+.no-appointments span {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.no-appointments p {
+  font-size: 1.2rem;
+  color: #444;
+  margin: 10px 0;
+}
+
+.no-appointments p:first-of-type {
+  font-size: 1.4rem;
+  color: #3e5930;
+  font-weight: 600;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  background: white;
+  border-radius: 20px;
+  padding: 60px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-size: 1.2rem;
+  color: #4a5568;
+}
+
+/* Error Message */
+.error-message {
+  background: #fed7d7;
+  color: #c53030;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 250px;
+  }
+
+  .main-content {
+    margin-left: 250px;
+    padding: 30px;
+  }
+
+  .appointments-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 20px 0;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 2rem;
+  }
+
+  .filter-tabs {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .filter-tab {
+    min-width: 120px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .appointments-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .appointment-card {
+    padding: 25px 20px;
+  }
+
+  .logo {
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }
+
+  .nav-menu {
+    padding: 0 15px;
+  }
+
+  .back-to-main {
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 15px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .dashboard-header p {
+    font-size: 1rem;
+  }
+
+  .filter-tabs {
+    gap: 10px;
+  }
+
+  .filter-tab {
+    min-width: 100px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  .appointment-card {
+    padding: 20px 15px;
+  }
+
+  .appointment-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .status {
+    padding: 4px 12px;
+    font-size: 0.8rem;
+  }
+
+  .view-details-btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+}

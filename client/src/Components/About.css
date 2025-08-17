@@ -1,0 +1,434 @@
+/* Add these styles to your existing About.css */
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4d4;
+  padding: 20px 40px;
+  font-weight: bold;
+}
+
+.logo {
+  font-size: 22px;
+  color: #567b42;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  color: #444;
+  text-decoration: none;
+}
+
+.nav-links a.active {
+  color: #567b42;
+  font-weight: bold;
+}
+
+.auth-buttons a {
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  margin: 0 5px;
+  color: white;
+}
+
+.auth-buttons .login {
+  background-color: #333;
+}
+
+.auth-buttons .signup {
+  background-color: #90b783;
+}
+
+/* About Header */
+.about-header {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f4f4d4;
+}
+
+.about-header h1 {
+  font-size: 36px;
+  color: #3e5930;
+  margin: 20px 0;
+}
+
+.about-header p {
+  font-size: 16px;
+  margin: 20px 0;
+  color: #666;
+  max-width: 700px;
+  margin: 20px auto;
+  line-height: 1.6;
+}
+
+/* Mission & Story Section */
+.mission-story {
+  padding: 40px;
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.mission-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.mission-text h2 {
+  color: #3e5930;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.mission-block h3 {
+  color: #3e5930;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.mission-block p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.mission-image {
+  flex: 1;
+  padding: 20px;
+}
+
+.placeholder-image {
+  width: 600px;
+  height: 400px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 2px dashed #ddd;
+}
+
+/* Team Section */
+.team-section {
+  padding: 60px 40px;
+  background-color: #f4f4d4;
+  text-align: center;
+}
+
+.team-section h2 {
+  color: #3e5930;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.team-subtitle {
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.team-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.team-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 350px;
+  text-align: center;
+}
+
+.team-avatar {
+  width: 120px;
+  height: 120px;
+  background-color: #ddd;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 14px;
+}
+
+.team-card h3 {
+  color: #3e5930;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.team-card h4 {
+  color: #7cbf4e;
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.team-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Footer - Same as Home page */
+.site-footer {
+  background-color: #f1f2dc;
+  padding: 50px 20px 20px;
+  margin-top: 60px;
+  font-size: 14px;
+  color: #444;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  gap: 40px;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  min-width: 180px;
+}
+
+.footer-logo {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #3e5930;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #3e5930;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #555;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+  color: #3e5930;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #777;
+}
+
+.site-footer hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0 auto 15px;
+  max-width: 1200px;
+}
+
+/* Add these responsive styles at the end of your About.css file */
+
+/* Responsive Design - Mobile First Approach */
+
+/* Large screens (desktop) */
+@media (min-width: 1024px) {
+  .mission-story {
+    padding: 40px;
+    gap: 40px;
+  }
+
+  .team-grid {
+    gap: 30px;
+  }
+
+  .team-card {
+    max-width: 350px;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .mission-story {
+    padding: 30px;
+    gap: 30px;
+    flex-direction: column;
+  }
+
+  .mission-text,
+  .mission-image {
+    flex: none;
+    width: 100%;
+  }
+
+  .placeholder-image {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+  }
+
+  .team-grid {
+    gap: 20px;
+  }
+
+  .team-card {
+    max-width: 300px;
+  }
+
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .nav-links a {
+    margin: 0 10px;
+    font-size: 14px;
+  }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 767px) {
+  .navbar {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 15px;
+  }
+
+  .auth-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .about-header {
+    padding: 40px 20px;
+  }
+
+  .about-header h1 {
+    font-size: 28px;
+  }
+
+  .about-header p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .mission-story {
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px;
+  }
+
+  .mission-text h2 {
+    font-size: 24px;
+  }
+
+  .mission-block h3 {
+    font-size: 18px;
+  }
+
+  .placeholder-image {
+    width: 100%;
+    height: 250px;
+    font-size: 16px;
+  }
+
+  .team-section {
+    padding: 40px 20px;
+  }
+
+  .team-section h2 {
+    font-size: 28px;
+  }
+
+  .team-grid {
+    gap: 20px;
+  }
+
+  .team-card {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .team-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-column {
+    flex: none;
+  }
+}
+
+/* Extra small screens (very small phones) */
+@media (max-width: 480px) {
+  .about-header h1 {
+    font-size: 24px;
+  }
+
+  .mission-text h2 {
+    font-size: 22px;
+  }
+
+  .team-section h2 {
+    font-size: 24px;
+  }
+
+  .team-card {
+    padding: 15px;
+  }
+
+  .placeholder-image {
+    height: 200px;
+    font-size: 14px;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .about-header {
+    padding: 30px 20px;
+  }
+
+  .team-section {
+    padding: 30px 20px;
+  }
+}
