@@ -1,10 +1,5 @@
 # 🍃 AyuMeet
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Node.js](https://img.shields.io/badge/Node.js-v18-green)](https://nodejs.org/)
-[![React](https://img.shields.io/badge/React-v18-blue)](https://reactjs.org/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-v6-green)](https://www.mongodb.com/)
-
 AyuMeet is a modern web platform that connects users with certified Ayurvedic practitioners. Browse doctors by specialization and consultation mode, view availability, and book appointments online, either virtually or in-person.
 
 ---
@@ -151,7 +146,3 @@ This project is licensed under the MIT License.
 ---
 
 > 🌿 AyuMeet – Bringing authentic Ayurvedic care online.
-
-
-Do you want me to do that next?
-```
