@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./DoctorDetail.css";
 
-const API_BASE = "http://localhost:5000/api";
+const API_BASE = "https://amrutam-sf8x.onrender.com/api";
 
 export default function DoctorDetail() {
   const { id } = useParams();

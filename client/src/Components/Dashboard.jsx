@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 import "./Dashboard.css";
 
-const API_BASE = "http://localhost:5000/api";
+const API_BASE = "https://amrutam-sf8x.onrender.com/api";
 
 const Dashboard = () => {
   const navigate = useNavigate();

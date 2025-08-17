@@ -13,7 +13,7 @@ export default function Login() {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    setError(""); // reset error
+    setError(""); 
     if (!email || !password) {
       setError("Please fill in both email and password.");
       return;
@@ -22,14 +22,17 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:5000/api/login", {
-        email: email.trim(),
-        password: password.trim(),
-      });
+      const res = await axios.post(
+        "https://amrutam-sf8x.onrender.com/api/login",
+        {
+          email: email.trim(),
+          password: password.trim(),
+        }
+      );
 
       if (res.data.token) {
         localStorage.setItem("token", res.data.token);
-        navigate("/"); // redirect after login
+        navigate("/"); 
       } else {
         setError("Invalid response from server.");
       }
