@@ -23,7 +23,7 @@ AyuMeet is a modern web platform that connects users with certified Ayurvedic pr
 - **HTTP Client:** Axios
 - **Other:** dotenv for environment variables
 
----
+--- 
 
 ## 🚀 Getting Started
 
